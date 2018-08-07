@@ -1,0 +1,234 @@
+html, body {
+     font-family: 'Roboto', 'PT-Sans', sans-serif;
+     max-width: 100%;
+     overflow-x: hidden;
+}
+.jumbotron {
+     margin-bottom: 0;
+}
+ #footer_jumbotron {
+     background-color: #d3dded;
+}
+ #info_jumbotron {
+     background: url("../nyc_background7.jpg") no-repeat center bottom;
+     height: 100%;
+     background-size: cover;
+     overflow: hidden;
+     position:relative;
+     top:0;
+     left:0;
+}
+ #info_jumbotron:before{
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     background-color: skyblue;
+     opacity: 0.7;
+}
+#info_text {
+    color: white;
+    position: relative;
+}
+#info_text a {
+    color: #16448e;
+}
+#info_text a:hover {
+    color: #476699;
+}
+.lead {
+     line-height: 1.4em;
+     letter-spacing: .1em;
+     font-size: 1.4em;
+}
+#info_text h1 {
+    font-size: 5em;
+}
+#mission_jumbotron {
+     background-color: rgba(227, 242, 253, 0.4);
+     height: 100%;
+}
+#main_nav {
+     background-color: white;
+}
+#main_nav img {
+    height: 50px;
+    width: 215px;
+}
+.link:hover, .link:visited {
+     text-decoration: none;
+}
+.link {
+     color: lightslategrey;
+     margin-right: 50px;
+}
+#find_resources {
+    background-color: white;
+}
+#find_resources h1 {
+
+}
+#search {
+    width: 100px;
+    background-color: lightskyblue;
+}
+#search:hover {
+    background-color: deepskyblue;
+}
+ #map {
+     width: 71%;
+     height: 88vh;
+     margin-left: 28%;
+     border: 3px solid skyblue;
+     border-top-right-radius: 5px;
+     border-bottom-right-radius: 5px;
+}
+#panel {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: 3px solid skyblue;
+    border-left: 3px solid skyblue;
+    border-bottom: 3px solid skyblue;
+    position:absolute;
+    width:27%;
+    height: 88vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-left: 1%;
+    font-size: .8em;
+    background-color: white;
+}
+ #zip {
+     width: 50%;
+     margin: auto;
+}
+ #images .rounded-circle {
+     height: 100px;
+     width: 100px;
+     border: 2px solid black;
+}
+#images figcaption {
+    font-size: .9em;
+}
+ .row {
+     text-align: center;
+     padding-right: 10%;
+     padding-left: 10%;
+}
+ .row .icon-group {
+     margin: auto;
+}
+.firstHeading {
+     font-weight: bold;
+}
+ul, ol {
+    list-style:none;
+}
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+.black-color, .black-color a {
+    color: black;
+}
+.white-color, .white-color a {
+    color: white;
+}
+.orange-color, .orange-color a {
+    color: orange;
+}
+.yellow-color, .yellow-color a {
+    color: #bab72e;
+}
+.green-color, .green-color a {
+    color: green;
+}
+.blue-color, .blue-color a {
+    color: #1d3c8c;
+}
+.red-color, .red-color a {
+    color: #0f7f79;
+    color: #ff8e8e;
+}
+.pink-color, .pink-color a {
+    color: #f442bc;
+}
+.purple-color, .purple-color a {
+    color: purple;
+}
+.lightblue-color, .lightblue-color a {
+    color: lightblue;
+}
+.soup_kitchens_background {
+    background-color: orange;
+}
+.food_pantries_background {
+    background-color: black;
+}
+.place_info {
+     padding-top: 5%;
+     padding-right: 5%;
+     padding-left: 5%;
+     height: 100%;
+     width: 100%;
+}
+.place_info a:hover {
+     text-decoration: underline;
+}
+.senior_center_background {
+    background-color: #73d678;
+}
+#bodyContent ul {
+    padding-left: 0;
+}
+#bodyContent ul li {
+     font-size: 1.4em;
+     font-weight: 400;
+}
+.firstHeading {
+    font-size: 1.5em;
+}
+
+@media (min-device-width : 200px) and (max-device-width : 800px) {
+    html, body {
+        font-size: 12px;
+    }
+    #info_jumbotron {
+        font-size: 7px;
+    }
+    #main_nav img {
+        height: 40px;
+        width: 110px;
+    }
+    .display-4 {
+        font-size: 14px;
+    }
+    #find_resources {
+        font-size: 7px;
+    }
+    #find_resources input[type='checkbox'] {
+        height: 10px;
+        width: 10px;
+    }
+    #images .rounded-circle {
+        height: 20px;
+        width: 20px;
+    }
+    #images img, #bodyContent img {
+        width: 15px;
+        height: 15px;
+    }
+    #panel, #panel h5 {
+        font-size: 8px;
+    }
+    #bodyContent ul li {
+        font-size: 10px;
+    }
+    #search {
+        width: 60px;
+    }
+    #map, #panel {
+        height: 50vh;
+    }
+}
