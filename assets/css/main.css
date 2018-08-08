@@ -196,7 +196,7 @@ a, a:visited, a:hover {
     html, body {
         font-size: 12px;
     }
-    #info_jumbotron {
+    #info_jumbotron, #mission_jumbotron {
         font-size: 7px;
     }
     #main_nav img {
@@ -221,16 +221,40 @@ a, a:visited, a:hover {
         width: 15px;
         height: 15px;
     }
-    #panel, #panel h5 {
-        font-size: 8px;
+    #panel, #panel h5, #panel h4 {
+        font-size: 10px;
     }
     #bodyContent ul li {
-        font-size: 10px;
+        font-size: 8px;
     }
     #search {
         width: 60px;
     }
-    #map, #panel {
-        height: 50vh;
+    #map {
+     width: 60%;
+     height: 40vh;
+     margin-left: 39%;
+     border: 3px solid skyblue;
+     border-top-right-radius: 5px;
+     border-bottom-right-radius: 5px;
+    }
+    #panel {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top: 3px solid skyblue;
+        border-left: 3px solid skyblue;
+        border-bottom: 3px solid skyblue;
+        position:absolute;
+        width:39%;
+        height: 40vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin-left: 1%;
+        font-size: 5px;
+        background-color: white;
+    }
+    #bodyContent ul li img {
+        height: 20px;
+        width: 20px;
     }
 }

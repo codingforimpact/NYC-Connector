@@ -97,7 +97,7 @@ $(function() {
 
       var factype = factype_display_names[type];
 
-      content += '<li> Type: <br /><img style="height: 30px; width: 30px;" src="assets/icons/' + factype_gif_images[type] + '" /> <strong>' + factype + '</strong> - <img src="assets/icons/' + factype_marker_images[type] + '" /></li><br />';
+      content += '<li> Type: <br /><img src="assets/icons/' + factype_gif_images[type] + '" /> <strong>' + factype + '</strong> - <img src="assets/icons/' + factype_marker_images[type] + '" /></li><br />';
       content += '<li> Address: <br /> <strong>' + place['Address'] + '</strong> - <a target="_blank" href="' + googleMapsSearchQuery(place['Address']) + '"> Directions </a></li><br />';
 
       
