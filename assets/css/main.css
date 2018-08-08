@@ -106,8 +106,8 @@ html, body {
      margin: auto;
 }
  #images .rounded-circle {
-     height: 100px;
-     width: 100px;
+     height: 95px;
+     width: 95px;
      border: 2px solid black;
 }
 #images figcaption {
@@ -120,6 +120,7 @@ html, body {
 }
  .row .icon-group {
      margin: auto;
+     margin-bottom: 10px;
 }
 .firstHeading {
      font-weight: bold;

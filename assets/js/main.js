@@ -49,7 +49,8 @@ $(function() {
           "food_scraps": "blue-color",
           "clothing_charities": "pink-color",
           "homeless_shelters": "purple-color",
-          "volunteer": "lightblue-color"
+          "volunteer": "lightblue-color",
+          "medical_centers": "red-color"
       };
 
       var factype_display_names = {
@@ -60,7 +61,8 @@ $(function() {
           "food_scraps": "Food Scrap Drop-off Site",
           "clothing_charities": "Clothing Charity",
           "homeless_shelters": "Homeless Shelter",
-          "volunteer": "Community Service Center"
+          "volunteer": "Community Service Center",
+          "medical_centers": place['Type']
       }
 
       var factype_gif_images = {
@@ -71,7 +73,8 @@ $(function() {
           "food_scraps": "foodscrapdropoffcenter.gif",
           "clothing_charities": "clothingshelter.gif",
           "homeless_shelters": "homelessshelter.gif",
-          "volunteer": "volunteer.png"
+          "volunteer": "volunteer.png",
+          "medical_centers": "health.png"
       }
 
       var factype_marker_images = {
@@ -82,7 +85,8 @@ $(function() {
           "food_scraps": "blue-dot.png",
           "clothing_charities": "pink-dot.png",
           "homeless_shelters": "purple-dot.png",
-          "volunteer": "lightblue-dot.png"
+          "volunteer": "lightblue-dot.png",
+          "medical_centers": "hospital.png"
       }
 
       var opening_div_tag = '<div class="place_info ' + factype_color_classes[type] + '">';
@@ -96,6 +100,8 @@ $(function() {
       content += '<li> Type: <br /><img style="height: 30px; width: 30px;" src="assets/icons/' + factype_gif_images[type] + '" /> <strong>' + factype + '</strong> - <img src="assets/icons/' + factype_marker_images[type] + '" /></li><br />';
       content += '<li> Address: <br /> <strong>' + place['Address'] + '</strong> - <a target="_blank" href="' + googleMapsSearchQuery(place['Address']) + '"> Directions </a></li><br />';
 
+      
+      
       if(type === "volunteer") {
         content += '<li> Website: <br /><strong>' + place['URL'] + '</strong></li><br />';
         content += '<li> Phone Number: <br /><strong>' + place['Phone'] + '</strong></li><br />';
@@ -155,6 +161,25 @@ $(function() {
     });
   });
   }
+    
+  function displayMedicalCenters(map) {
+      loadJSONData("medical_centers", function(data) {
+         data.forEach(function(place) {
+            var content = handleContent("medical_centers", place);
+            var latitude = place['lat'];
+            var longitude = place['lng'];
+            map.addMarker({
+            lat: latitude,
+            lng: longitude,
+            icon: 'assets/icons/hospital.png',
+            click: function(e) {
+                $("#panel").html(content);
+                map.setCenter(latitude, longitude);
+            }
+            });
+        });
+      }); 
+  }
 
   function displayCheckedItems(map) {
       $("input:checkbox:checked").each(function(box) {
@@ -182,6 +207,9 @@ $(function() {
         }
         if(id === "volunteer_checkbox") {
           displayMarkers(map, 'volunteer', 'lightblue');
+        }
+        if(id === "medical_centers_checkbox") {
+           displayMedicalCenters(map);
         }
       });
   }
@@ -222,6 +250,7 @@ $(function() {
       displayMarkers(map, 'homeless_shelters', 'purple');
       displayMarkers(map, 'clothing_charities', 'pink');
       displayMarkers(map, 'volunteer', 'lightblue');
+      displayMedicalCenters(map);
       handleSubmit(map);
   }
 
