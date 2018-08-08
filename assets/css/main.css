@@ -188,6 +188,10 @@ a, a:visited, a:hover {
      font-size: 1.4em;
      font-weight: 400;
 }
+#bodyContent ul li img {
+    width: 32px;
+    height: 32px;
+}
 .firstHeading {
     font-size: 1.5em;
 }
@@ -207,7 +211,7 @@ a, a:visited, a:hover {
         font-size: 14px;
     }
     #find_resources {
-        font-size: 7px;
+        font-size: 9px;
     }
     #find_resources input[type='checkbox'] {
         height: 10px;
@@ -227,8 +231,14 @@ a, a:visited, a:hover {
     #bodyContent ul li {
         font-size: 8px;
     }
+    #search_input {
+        font-size: 10px;
+        height:20px;
+    }
     #search {
         width: 60px;
+        height: 20px;
+        font-size: 10px;
     }
     #map {
      width: 60%;
