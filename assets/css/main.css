@@ -35,7 +35,7 @@ html, body {
 #info_text a {
     color: white;
 }
-#info_text a:hover {
+#info_text a:hover, #mission_jumbotron a:hover {
     text-decoration: underline;
 }
 .lead {
