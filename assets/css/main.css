@@ -150,8 +150,10 @@ a, a:visited, a:hover {
     color: #1d3c8c;
 }
 .red-color, .red-color a {
-    color: #0f7f79;
     color: #ff8e8e;
+}
+.hospital-color, .hospital-color a {
+    color: red;
 }
 .pink-color, .pink-color a {
     color: #f442bc;
@@ -231,7 +233,7 @@ a, a:visited, a:hover {
     #bodyContent ul li {
         font-size: 8px;
     }
-    #search_input {
+    #address {
         font-size: 10px;
         height:20px;
     }

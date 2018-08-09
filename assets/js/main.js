@@ -50,7 +50,7 @@ $(function() {
           "clothing_charities": "pink-color",
           "homeless_shelters": "purple-color",
           "volunteer": "lightblue-color",
-          "medical_centers": "red-color"
+          "medical_centers": "hospital-color"
       };
 
       var factype_display_names = {
