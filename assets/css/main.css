@@ -66,7 +66,7 @@ html, body {
      margin-right: 50px;
 }
 #find_resources {
-    background-color: #eef2f3;
+    background-color: white;
 }
 #search {
     width: 100px;
@@ -108,7 +108,7 @@ html, body {
  #images .rounded-circle {
      height: 95px;
      width: 95px;
-     border: 2px solid black;
+     border: 2px solid white;
 }
 #images figcaption {
     font-size: .9em;

@@ -222,7 +222,7 @@ $(function() {
           if (status == 'OK') {
             var latlng = results[0].geometry.location;
             map.setCenter(latlng.lat(), latlng.lng());
-            map.setZoom(15);
+            map.setZoom(14);
             map.addMarker({
             lat: latlng.lat(),
             lng: latlng.lng()
