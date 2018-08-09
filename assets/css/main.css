@@ -53,6 +53,7 @@ html, body {
 }
 #main_nav {
      background-color: white;
+     border-bottom: 4px solid #327dba;
 }
 #main_nav img {
     height: 50px;
