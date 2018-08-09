@@ -106,9 +106,9 @@ html, body {
     position: relative;
 }
  #images .rounded-circle {
-     height: 95px;
-     width: 95px;
-     border: 2px solid white;
+     height: 110px;
+     width: 110px;
+     border: 2px solid black;
 }
 #images figcaption {
     font-size: .9em;
