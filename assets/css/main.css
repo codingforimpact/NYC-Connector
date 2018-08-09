@@ -68,9 +68,6 @@ html, body {
 #find_resources {
     background-color: white;
 }
-#find_resources h1 {
-
-}
 #search {
     width: 100px;
     background-color: lightskyblue;
@@ -102,7 +99,7 @@ html, body {
     background-color: white;
 }
  #zip {
-     width: 50%;
+     width: 70%;
      margin: auto;
 }
  #images .rounded-circle {
@@ -164,12 +161,6 @@ a, a:visited, a:hover {
 .lightblue-color, .lightblue-color a {
     color: lightblue;
 }
-.soup_kitchens_background {
-    background-color: orange;
-}
-.food_pantries_background {
-    background-color: black;
-}
 .place_info {
      padding-top: 5%;
      padding-right: 5%;
@@ -179,9 +170,6 @@ a, a:visited, a:hover {
 }
 .place_info a:hover {
      text-decoration: underline;
-}
-.senior_center_background {
-    background-color: #73d678;
 }
 #bodyContent ul {
     padding-left: 0;
@@ -233,7 +221,7 @@ a, a:visited, a:hover {
     #bodyContent ul li {
         font-size: 8px;
     }
-    #address {
+    #address { 
         font-size: 10px;
         height:20px;
     }
