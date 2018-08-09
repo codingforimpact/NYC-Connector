@@ -66,7 +66,9 @@ html, body {
      margin-right: 50px;
 }
 #find_resources {
-    background-color: white;
+    background: #ada996; /* fallback for old browsers */
+  background: webkit-linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); 
+  background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); 
 }
 #search {
     width: 100px;
