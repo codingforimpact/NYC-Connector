@@ -108,7 +108,6 @@ html, body {
      margin: auto;
 }
 #images {
-    position: relative;
 }
  #images .rounded-circle {
      height: 110px;
@@ -120,8 +119,8 @@ html, body {
 }
  .row {
      text-align: center;
-     padding-right: 10%;
-     padding-left: 10%;
+     padding-right: 5%;
+     padding-left: 5%;
 }
  .row .icon-group {
      margin: auto;
