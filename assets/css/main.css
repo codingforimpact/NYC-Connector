@@ -194,7 +194,7 @@ a, a:visited, a:hover {
     font-size: 1.5em;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 2400px) {
     #info_jumbotron, #mission_jumbotron {
         font-size: 1.3em;
     }
