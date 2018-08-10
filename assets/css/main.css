@@ -195,6 +195,9 @@ a, a:visited, a:hover {
 }
 
 @media (min-width: 1400px) {
+    #info_jumbotron, #mission_jumbotron {
+        font-size: 1.4em;
+    }
     #images .rounded-circle {
         height: 175px;
         width: 175px;
@@ -216,7 +219,7 @@ a, a:visited, a:hover {
     }
     
     #bodyContent ul li, .firstHeading {
-        font-size : 2.4em;
+        font-size : 2.2em;
     }
 }
 
