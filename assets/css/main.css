@@ -196,8 +196,8 @@ a, a:visited, a:hover {
 
 @media (min-width: 1400px) {
     #images .rounded-circle {
-        height: 200px;
-        width: 200px;
+        height: 175px;
+        width: 175px;
     }
     
     #images figcaption {
@@ -207,11 +207,16 @@ a, a:visited, a:hover {
     #search {
         height: 75px;
         width: 150px;
+        font-size: 1.4em;
     }
     
     #address {
         height: 75px;
         font-size: 1.4em;
+    }
+    
+    #bodyContent ul li, .firstHeading {
+        font-size : 2.4em;
     }
 }
 
