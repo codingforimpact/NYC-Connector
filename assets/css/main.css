@@ -80,16 +80,16 @@ html, body {
      width: 71%;
      height: 88vh;
      margin-left: 28%;
-     border: 3px solid skyblue;
+     border: 3px solid #32648c;
      border-top-right-radius: 5px;
      border-bottom-right-radius: 5px;
 }
 #panel {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-top: 3px solid skyblue;
-    border-left: 3px solid skyblue;
-    border-bottom: 3px solid skyblue;
+    border-top: 3px solid #32648c;
+    border-left: 3px solid #32648c;
+    border-bottom: 3px solid #32648c;
     position:absolute;
     width:27%;
     height: 88vh;
