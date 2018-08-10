@@ -71,10 +71,11 @@ html, body {
 }
 #search {
     width: 100px;
-    background-color: lightskyblue;
+    background-color: #32648c;
+    color: white;
 }
 #search:hover {
-    background-color: deepskyblue;
+    background-color: #1e3d56;
 }
  #map {
      width: 71%;
