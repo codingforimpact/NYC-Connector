@@ -17,6 +17,7 @@ html, body {
      position:relative;
      top:0;
      left:0;
+     border-bottom: 3px solid #32648c;
 }
  #info_jumbotron:before{
      content: '';
@@ -155,7 +156,7 @@ a, a:visited, a:hover {
     color: #1d3c8c;
 }
 .red-color, .red-color a {
-    color: #ff8e8e;
+    color: #6dad68;
 }
 .hospital-color, .hospital-color a {
     color: red;
