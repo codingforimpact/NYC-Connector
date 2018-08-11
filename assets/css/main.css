@@ -3,12 +3,36 @@ html, body {
      max-width: 100%;
      overflow-x: hidden;
 }
-.jumbotron {
-     margin-bottom: 0;
+
+ul, ol {
+    list-style:none;
 }
- #footer_jumbotron {
-     background-color: #d3dded;
+
+a, a:visited, a:hover {
+    text-decoration: none;
 }
+
+/* Header */
+#main_nav {
+     background-color: white;
+     border-bottom: 2px solid #32648c;
+}
+
+#main_nav img {
+    height: 50px;
+    width: 215px;
+}
+
+.link:hover, .link:visited {
+     text-decoration: none;
+}
+.link {
+     color: lightslategrey;
+     margin-right: 50px;
+}
+
+/* Top Jumbotron */
+
  #info_jumbotron {
      background: url("../nyc_background7.jpg") no-repeat center bottom;
      height: 100%;
@@ -46,32 +70,16 @@ html, body {
 #info_text h1 {
     font-size: 5em;
 }
-#mission_jumbotron {
-     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-     height: 100%;
-     color: white;
-}
-#main_nav {
-     background-color: white;
-     border-bottom: 2px solid #32648c;
-}
-#main_nav img {
-    height: 50px;
-    width: 215px;
-}
-.link:hover, .link:visited {
-     text-decoration: none;
-}
-.link {
-     color: lightslategrey;
-     margin-right: 50px;
-}
+
+/* Find Resources/Map Section */
+
 #find_resources {
     background-color: white;
 }
 #find_resources h1 {
     font-weight: 200;
 }
+
 #search {
     width: 100px;
     background-color: #32648c;
@@ -118,24 +126,54 @@ html, body {
 #images figcaption {
     font-size: .9em;
 }
- .row {
+.row {
      text-align: center;
      padding-right: 2%;
      padding-left: 2%;
 }
- .row .icon-group {
+.row .icon-group {
      margin: auto;
      margin-bottom: 10px;
 }
 .firstHeading {
      font-weight: bold;
+     font-size: 1.5em;
 }
-ul, ol {
-    list-style:none;
+.place_info {
+     padding-top: 5%;
+     padding-right: 5%;
+     padding-left: 5%;
+     height: 100%;
+     width: 100%;
 }
-a, a:visited, a:hover {
-    text-decoration: none;
+.place_info a:hover {
+     text-decoration: underline;
 }
+#bodyContent ul {
+    padding-left: 0;
+}
+#bodyContent ul li {
+     font-size: 1.4em;
+     font-weight: 400;
+}
+#bodyContent ul li img {
+    width: 32px;
+    height: 32px;
+}
+
+.jumbotron {
+     margin-bottom: 0;
+}
+ #footer_jumbotron {
+     background-color: #d3dded;
+}
+
+#mission_jumbotron {
+     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+     height: 100%;
+     color: white;
+}
+
 .black-color, .black-color a {
     color: black;
 }
@@ -168,30 +206,6 @@ a, a:visited, a:hover {
 }
 .lightblue-color, .lightblue-color a {
     color: lightblue;
-}
-.place_info {
-     padding-top: 5%;
-     padding-right: 5%;
-     padding-left: 5%;
-     height: 100%;
-     width: 100%;
-}
-.place_info a:hover {
-     text-decoration: underline;
-}
-#bodyContent ul {
-    padding-left: 0;
-}
-#bodyContent ul li {
-     font-size: 1.4em;
-     font-weight: 400;
-}
-#bodyContent ul li img {
-    width: 32px;
-    height: 32px;
-}
-.firstHeading {
-    font-size: 1.5em;
 }
 
 @media (min-width: 2400px) {
