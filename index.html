@@ -146,8 +146,12 @@
 		</div>
 	</div>
     <script>
+        var add_offset = 0;
+        if( /Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent) ) {
+            add_offset = 50;
+        }
         var scroll = new SmoothScroll('a[href*="#"]', {
-
+                                    
     // Selectors
     ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
     header: null, // Selector for fixed headers (must be a valid CSS selector)
@@ -159,16 +163,16 @@
     offset: function(anchor, toggle) {
         var id = $(toggle).attr("href");
         if (id === "#find_resources") {
-            return 70;
+            return 70 + add_offset;
         }
         if (id === "#contact") {
-            return 100;
+            return 100 + add_offset;
         }
         if (id === "#map") {
-            return 85;
+            return 85 + add_offset;
         }
         if (id === "#mission") {
-            return 100;
+            return 100 + add_offset;
         }
     },
     easing: 'easeInOutCubic', // Easing pattern to use
