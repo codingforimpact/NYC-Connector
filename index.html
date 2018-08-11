@@ -136,7 +136,7 @@
     <div class="jumbotron jumbotron-fluid" id="mission_jumbotron">
         <div class="container">
             <h1 class="display-4 text-center" id="mission">Mission</h1><br />
-            <p class="lead">NYC Connector was built in order to connect the thousands of charities, community service centers, and medical centers based in New York City with the tens of thousands of teenagers and adults looking to give back to the community or find help. You would be surprised to see the number of service opportunities within a couple blocks of where you live. Built by the team at <a style="color: skyblue;" href="https://www.codingforimpact.org" target="_blank">Coding for Impact</a>, a student-led club at Hunter College High School, NYC Connector aims to create a platform for connecting fringe, website-less and often contact-less charities to volunteers, as well as showing the plethora of service opportunities that exist in NYC. <br /><br />Unlike most websites that connect volunteers to charities, NYC Connector combines all different types of charitable non profit institutions constantly looking for people to help them into one website. We utilized and combined the most comprehensive datasets in NYC, resulting in a wide array of resources to choose from. For all individuals looking to volunteer in NYC or find medical help or shelter, our self-built software allows for individuals to view specific resource centers near their address, as well as giving direct contact information. We hope to drive a positive impact in our community with this project, and hope that you are able to utilize this resource to its best.</p>
+            <p class="lead">NYC Connector was built in order to connect the thousands of charities, community service centers, and medical centers based in New York City with the tens of thousands of teenagers and adults looking to give back to the community or find help. You would be surprised to see the number of service opportunities within a couple blocks of where you live. Built by the team at <a style="color: skyblue;" href="https://www.codingforimpact.org" target="_blank">Coding for Impact</a>, a student-led club at Hunter College High School, NYC Connector aims to create a platform for connecting fringe, website-less and often contact-less charities to volunteers, as well as showing the plethora of service opportunities that exist in NYC. <br /><br />Unlike most websites that connect volunteers to charities, NYC Connector combines a vast array of volunteer centers into one website. We utilized and combined the most comprehensive datasets in NYC, resulting in a wide array of resources to choose from. For all individuals looking to volunteer in NYC or find medical help or shelter, our self-built software allows for individuals to view specific resource centers near their address, as well as giving direct contact information. We hope to drive a positive impact in our community with this project, and hope that you are able to utilize this resource to its best.</p>
         </div>
     </div>
 	<div class="jumbotron jumbotron-fluid bg-light" style="height: 100%;">
@@ -205,17 +205,17 @@
                 return;
 
             var offset = 0;
-            if (hash === "find_resources") {
-                offset = -55;
+            if (hash === "#find_resources") {
+            return 70;
             }
-            if (hash === "contact") {
-                offset = -85;
+            if (hash === "#contact") {
+                return 100;
             }
-            if (hash === "map") {
-                offset = -70;
+            if (hash === "#map") {
+                return 85;
             }
-            if (hash === "mission") {
-                offset = -85;
+            if (hash === "#mission") {
+                return 100;
             }
             var sel = '[id="' + hash + '"], a[name="' + hash + '"]';
             var currentOffset = $( sel ).offset().top;
