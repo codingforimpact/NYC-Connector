@@ -53,9 +53,9 @@ a, a:visited, a:hover {
      background-color: #1e447a;
      opacity: 0.6;
 }
-#info_text {
-    color: white;
+#info_jumbotron .container {
     position: relative;
+    color: white;
 }
 #info_text a {
     color: white;
@@ -171,10 +171,32 @@ a, a:visited, a:hover {
      background-color: #d3dded;
 }
 
+/* Mission Jumbotron */
+
 #mission_jumbotron {
-     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+     background: url("../nyc_background7.jpg") no-repeat center bottom;
      height: 100%;
-     color: white;
+     background-attachment: fixed;
+     background-size: cover;
+     overflow: hidden;
+     position:relative;
+     top:0;
+     left:0;
+}
+ #mission_jumbotron:before{
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     background-color: #1e447a;
+     opacity: 0.6;
+}
+
+#mission_jumbotron .container {
+    position: relative;
+    color: white;
 }
 
 .black-color, .black-color a {
