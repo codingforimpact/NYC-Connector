@@ -17,7 +17,6 @@ html, body {
      position:relative;
      top:0;
      left:0;
-     border-bottom: 3px solid #32648c;
 }
  #info_jumbotron:before{
      content: '';
