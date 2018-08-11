@@ -243,6 +243,12 @@ a, a:visited, a:hover {
     html, body {
         font-size: 12px;
     }
+    #main_nav {
+        position: static;
+    }
+    #info_jumbotron {
+        background-attachment: none;
+    }
     #info_jumbotron, #mission_jumbotron {
         font-size: 7px;
     }
