@@ -206,16 +206,16 @@
 
             var offset = 0;
             if (hash === "#find_resources") {
-            return 70;
+                offset = -70;
             }
             if (hash === "#contact") {
-                return 100;
+                offset = -100;
             }
             if (hash === "#map") {
-                return 85;
+                offset = -85;
             }
             if (hash === "#mission") {
-                return 100;
+                offset = -100;
             }
             var sel = '[id="' + hash + '"], a[name="' + hash + '"]';
             var currentOffset = $( sel ).offset().top;
