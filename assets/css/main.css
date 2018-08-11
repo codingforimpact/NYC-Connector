@@ -260,8 +260,9 @@ a, a:visited, a:hover {
         width: 10px;
     }
     #images .rounded-circle {
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
+        border: none;
     }
     #images img, #bodyContent img {
         width: 15px;
@@ -269,6 +270,10 @@ a, a:visited, a:hover {
     }
     #panel, #panel h5, #panel h4 {
         font-size: 10px;
+    }
+    .row {
+        padding-left: 20px;
+        padding-right: 20px;
     }
     #bodyContent ul li {
         font-size: 8px;
@@ -284,21 +289,13 @@ a, a:visited, a:hover {
     }
     #map {
      width: 60%;
-     height: 40vh;
+     height: 60vh;
      margin-left: 39%;
-     border: 3px solid skyblue;
-     border-top-right-radius: 5px;
-     border-bottom-right-radius: 5px;
     }
     #panel {
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-top: 3px solid skyblue;
-        border-left: 3px solid skyblue;
-        border-bottom: 3px solid skyblue;
         position:absolute;
         width:39%;
-        height: 40vh;
+        height: 60vh;
         overflow-x: hidden;
         overflow-y: scroll;
         margin-left: 1%;
