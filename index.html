@@ -25,7 +25,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg fixed-top navbar-light pl-5" id="main_nav">
-		<a class="navbar-brand" href=""><img style="" src="assets/icons/logo1.png" /></a><br>
+		<a class="navbar-brand" href=""><img style="" class="img-fluid" src="assets/icons/logo1.png" /></a><br>
 		<br>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
 	<div class="jumbotron jumbotron-fluid mt-5" id="info_jumbotron">
         <div id="nyc_background" class="pt-5">
 		<div class="container" id="info_text">
-			<h1 class="display-4 text-center">NYC Connector</h1>
+			<h1 class="display-4 text-center" style="font-weight: 300;">NYC Connector</h1>
 			<h3 class="text-center"><em>Connecting individuals and resources!</em></h3><br>
             <p class="lead">Built by <a style="color: skyblue;" href="https://www.codingforimpact.org" target="_blank">Coding for Impact</a>, <span class="font-weight-bold">NYC Connector</span> is a project which allows users to easily find and locate places near them where they can volunteer at, donate to, or find help at, such as soup kitchens, food pantries, SNAP centers, senior centers, food scrap drop-off sites, as well as clothing charities, homeless shelters, and medical centers. Enter an address or zip code and select the places you want to see, and resources nearby will be displayed on the map. Click on a pinpoint marker to view information about the resource. It's as easy as that!<br>
 			<br>
@@ -142,14 +142,10 @@
 	<div class="jumbotron jumbotron-fluid bg-light" style="height: 100%;">
 		<div class="container">
 			<h1 class="display-4 text-center" id="contact">Contact</h1><br />
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEOT5tmg_herTpYeq2L1gz8y6nYvDz3wVQBXzgn2KSUs5JwQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" style="height: 90em; width: 100%;">Loading...</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEOT5tmg_herTpYeq2L1gz8y6nYvDz3wVQBXzgn2KSUs5JwQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" style="height: 170vh; width: 100%;">Loading...</iframe>
 		</div>
 	</div>
     <script>
-        var add_offset = 0;
-        if( /Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent) ) {
-            add_offset = 250;
-        }
         var scroll = new SmoothScroll('a[href*="#"]', {
                                     
     // Selectors
