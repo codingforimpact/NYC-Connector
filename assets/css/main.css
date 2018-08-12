@@ -77,7 +77,8 @@ a, a:visited, a:hover {
 /* Find Resources/Map Section */
 
 #find_resources {
-    background-color: white;
+    color: #43464c;
+    background-color: #f7f8f9;
     border: 3px solid #32648c;
     position: relative;
 }
