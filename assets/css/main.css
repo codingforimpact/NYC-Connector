@@ -78,7 +78,7 @@ a, a:visited, a:hover {
 
 #find_resources {
     color: #43464c;
-    background-color: #f7f8f9;
+    background-color: white;
     border: 3px solid #32648c;
     position: relative;
 }
