@@ -83,7 +83,7 @@ a, a:visited, a:hover {
     position: relative;
 }
 #find_resources h1 {
-    font-weight: 200;
+    font-weight: 300;
 }
 
 #search {
@@ -91,7 +91,13 @@ a, a:visited, a:hover {
     background-color: #32648c;
     color: white;
 }
-#search:hover {
+#useCurrentLocation {
+    width: 100%;
+    
+    background-color: #32648c;
+    color: white;
+}
+#search:hover, #useCurrentLocation:hover {
     background-color: #1e3d56;
 }
  #map {
