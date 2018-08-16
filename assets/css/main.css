@@ -316,6 +316,11 @@ a, a:visited, a:hover {
         font-size: 10px;
         height:20px;
     }
+    #zip {
+        width: 100vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
     #search {
         width: 60px;
         height: 20px;
