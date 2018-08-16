@@ -1,7 +1,18 @@
 $(function() {
   var submitButton = $("#search");
+  var currentLocationButton = $("#useCurrentLocation");
   var addressField = $("#address");
   var clearAllButton = $("#clear_all");
+    
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  };
+
+  function error(err) {
+    alert(`ERROR(${err.code}): ${err.message}`);
+  }
 
   function loadJSONData(path, callback) {
     $.getJSON(window.location.href + 'data/' + path + '.json', function(data) {
@@ -216,6 +227,8 @@ $(function() {
 
   function handleSubmit(map) {
     submitButton.click(function() {
+      map.removeMarkers();
+      displayCheckedItems(map);
       GMaps.geocode({
         address: addressField.val().trim(),
         callback: function(results, status) {
@@ -230,9 +243,32 @@ $(function() {
           }
         }
       });
-      map.removeMarkers();
-      displayCheckedItems(map);
     });
+  }
+    
+  function getCurrentLocation(callback) {
+      if("geolocation" in navigator) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+              callback(position);
+          }, error, options);
+       } else {
+           alert("Sorry, it seems like geolocation is not supported by your browser");
+       }
+  }
+    
+  function handleSubmitCurrentLocation(map) {
+      currentLocationButton.click(function() {
+          map.removeMarkers();
+          displayCheckedItems(map);
+          getCurrentLocation(function(pos) {
+            map.setCenter(pos.coords.latitude, pos.coords.longitude);
+            map.setZoom(14);
+            map.addMarker({
+                lat: pos.coords.latitude,
+                lng: pos.coords.longitude
+            });
+          });
+      });
   }
 
   function init() {
@@ -252,6 +288,7 @@ $(function() {
       displayMarkers(map, 'volunteer', 'lightblue');
       displayMedicalCenters(map);
       handleSubmit(map);
+      handleSubmitCurrentLocation(map);
   }
 
   init();
