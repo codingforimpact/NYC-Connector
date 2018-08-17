@@ -4,4 +4,4 @@ Built by **[Coding for Impact](https://www.codingforimpact.org)**, [NYC Connecto
 
 **[Coding for Impact](https://www.codingforimpact.org)** is a student-led club at Hunter College High School, with the goal of developing software and web applications that positively impact the world.
 
-![Screenshot 1](/nyc-connector-2.png)
+![Screenshot 1](nyc-connector-2.png)
