@@ -6,7 +6,7 @@ $(function() {
     
   var options = {
     enableHighAccuracy: true,
-    timeout: 7000,
+    timeout: 5000,
     maximumAge: 0
   };
 
