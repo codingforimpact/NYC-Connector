@@ -1,5 +1,5 @@
 html, body {
-     font-family: 'Roboto', sans-serif;
+     font-family: 'Source Sans Pro', 'Roboto', sans-serif;
      max-width: 100%;
      overflow-x: hidden;
 }
@@ -54,6 +54,9 @@ a, a:visited, a:hover {
      bottom: 0;
      background-color: #1e447a;
      opacity: 0.6;
+}
+#info_jumbotron h1, #info_jumbotron h3 {
+    font-family: 'Roboto', sans-serif;
 }
 #info_jumbotron .container {
     position: relative;
