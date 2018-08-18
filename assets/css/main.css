@@ -29,7 +29,7 @@ a, a:visited, a:hover {
      text-decoration: none;
 }
 .link {
-     color: lightslategrey;
+     color: grey;
      margin-right: 50px;
 }
 
@@ -53,7 +53,7 @@ a, a:visited, a:hover {
      left: 0;
      bottom: 0;
      background-color: #1e447a;
-     opacity: 0.6;
+     opacity: 0.5;
 }
 #info_jumbotron h1, #info_jumbotron h3 {
     font-family: 'Roboto', sans-serif;
@@ -274,7 +274,7 @@ a, a:visited, a:hover {
     }
 }
 
-@media (min-device-width : 200px) and (max-device-width : 800px) {
+@media (min-device-width : 200px) and (max-device-width : 767px) {
     html, body {
         font-size: 12px;
     }
