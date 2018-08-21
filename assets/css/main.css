@@ -18,6 +18,9 @@ a, a:visited, a:hover {
      -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
     -moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
     box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+    letter-spacing: 2px;
+    border: 0;
+    margin-bottom: 0;
 }
 
 #main_nav img {
@@ -29,7 +32,6 @@ a, a:visited, a:hover {
      text-decoration: none;
 }
 .link {
-     color: grey;
      margin-right: 50px;
 }
 
@@ -82,10 +84,13 @@ a, a:visited, a:hover {
 #find_resources {
     color: #43464c;
     background-color: white;
-    border: 3px solid #32648c;
+    border-bottom: 3px solid #32648c;
+    border-right: 3px solid #32648c;
+    border-left: 3px solid #32648c;
     position: relative;
 }
 #find_resources h1 {
+    color: #555;
     font-weight: 300;
 }
 
