@@ -24,7 +24,7 @@ a, a:visited, a:hover {
 }
 
 #main_nav img {
-    height: 50px;
+    height: 40px;
     width: 230px;
 }
 
@@ -54,7 +54,7 @@ a, a:visited, a:hover {
      right: 0;
      left: 0;
      bottom: 0;
-     background-color: #1e447a;
+     background-color: #092756;
      opacity: 0.6;
 }
 #info_jumbotron h1, #info_jumbotron h3 {
