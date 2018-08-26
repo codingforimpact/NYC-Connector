@@ -4,6 +4,10 @@ html, body {
      overflow-x: hidden;
 }
 
+body {
+    position: relative;
+}
+
 ul, ol {
     list-style:none;
 }
@@ -46,6 +50,8 @@ a, a:visited, a:hover {
      position:relative;
      top:0;
      left:0;
+     bottom: 0;
+     right: 0;
 }
  #info_jumbotron:before{
      content: '';
@@ -54,7 +60,7 @@ a, a:visited, a:hover {
      right: 0;
      left: 0;
      bottom: 0;
-     background-color: #092756;
+     background-color: #0c2e63;
      opacity: 0.6;
 }
 #info_jumbotron h1, #info_jumbotron h3 {
@@ -247,7 +253,7 @@ a, a:visited, a:hover {
     color: purple;
 }
 .lightblue-color, .lightblue-color a {
-    color: lightblue;
+    color: #7c95bc;
 }
 
 @media (min-width: 2400px) {
