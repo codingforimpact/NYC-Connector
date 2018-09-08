@@ -6,12 +6,12 @@ $(function() {
     
   var options = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    timeout: 7500,
     maximumAge: 0
   };
 
   function error(err) {
-    alert(`ERROR(${err.code}): ${err.message}`);
+    alert(`ERROR(${err.code}): ${err.message} \n Try clicking again`);
   }
 
   function loadJSONData(path, callback) {
