@@ -26,6 +26,39 @@ a, a:visited, a:hover {
     border-color: #1e3d56;
 }
 
+input[type="checkbox"] {
+    -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 3px;
+     height: 18px;
+     width: 18px;
+     border: 0;
+     cursor: pointer;     
+     margin-right: 5px;
+     outline: 1px solid #d7d9dd;
+}
+
+input[type="checkbox"]:checked:before {
+    position: absolute;
+    font: 14px/1 'Open Sans', sans-serif;
+    left: 5px;
+    content: '\02143';
+    transform: rotate(40deg);
+}
+
+input[type="checkbox"]:hover, input[type="checkbox"]:checked {
+    background-color: #f7faff;
+}
+
+input[type="checkbox"]:checked:hover {
+    background-color: #f1f1f1;
+}
+
 /* Header */
 #main_nav {
      background-color: white;
