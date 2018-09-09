@@ -3,6 +3,8 @@ $(function() {
   var currentLocationButton = $("#useCurrentLocation");
   var addressField = $("#address");
   var clearAllButton = $("#clear_all");
+  var selectAllButton = $("#select_all");
+  var deselectAllButton = $("#deselect_all");
     
   var options = {
     enableHighAccuracy: true,
@@ -54,7 +56,7 @@ $(function() {
 
       var factype_color_classes = {
           "soup_kitchens": "orange-color",
-          "senior_centers": "red-color",
+          "senior_centers": "senior-center-color",
           "snap_centers": "green-color",
           "food_pantries": "yellow-color",
           "food_scraps": "blue-color",
@@ -270,7 +272,21 @@ $(function() {
           });
       });
   }
-
+    
+  function handleSelectButtons() {
+      selectAllButton.click(function() {
+          $("input:checkbox").each(function(box) {
+             $(this).prop('checked', true);
+          });
+      });
+      
+      deselectAllButton.click(function() {
+         $("input:checkbox").each(function(box) {
+            $(this).prop('checked', false); 
+         });
+      });
+  }
+    
   function init() {
       var map = new GMaps({
         el: '#map',
@@ -289,6 +305,7 @@ $(function() {
       displayMedicalCenters(map);
       handleSubmit(map);
       handleSubmitCurrentLocation(map);
+      handleSelectButtons();
   }
 
   init();

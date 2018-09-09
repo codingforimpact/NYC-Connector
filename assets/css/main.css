@@ -16,6 +16,16 @@ a, a:visited, a:hover {
     text-decoration: none;
 }
 
+.btn-primary {
+    background-color: #32648c;
+    border-color: #32648c;
+}
+
+.btn-primary:hover {
+    background-color: #1e3d56;
+    border-color: #1e3d56;
+}
+
 /* Header */
 #main_nav {
      background-color: white;
@@ -106,7 +116,6 @@ a, a:visited, a:hover {
 }
 #useCurrentLocation {
     width: 100%;
-    
     background-color: #32648c;
     color: white;
 }
@@ -229,25 +238,26 @@ a, a:visited, a:hover {
 }
 .orange-color, .orange-color a {
     color: orange;
+    color: #d19317;
 }
 .yellow-color, .yellow-color a {
     color: #bab72e;
 }
 .green-color, .green-color a {
     color: green;
+    color: #23c473;
 }
 .blue-color, .blue-color a {
-    color: #1d3c8c;
+    color: #4462a3;
 }
-.red-color, .red-color a {
-    color: #6dad68;
+.senior-center-color, .senior-center-color a {
+    color: #137a65;
 }
 .hospital-color, .hospital-color a {
-    color: red;
+    color: #ce5864;
 }
 .pink-color, .pink-color a {
-    color: #f442bc;
-    color: #f268db;
+    color: #f23a7c;
 }
 .purple-color, .purple-color a {
     color: purple;
