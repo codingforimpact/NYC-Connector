@@ -237,6 +237,7 @@ $(function() {
   function handleSubmit(map) {
     submitButton.click(function() {
       map.removeMarkers();
+      map.removePolylines();
       displayCheckedItems(map);
       GMaps.geocode({
         address: addressField.val().trim(),
