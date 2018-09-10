@@ -306,11 +306,13 @@ $(function() {
       $("#showRoute").click(function(e) {
          mainPanel.fadeOut();
          routesPanel.fadeIn();
+          
          $("#routes_panel i").click(function(e) {
               map.removePolylines();
               $("#route_directions").html('');
               var id = $(this).attr("id");
               var travelType = id;
+              /*
               map.travelRoute({
                   origin: startCoords,
                   destination: endCoords,
@@ -321,9 +323,25 @@ $(function() {
                         strokeColor: 'black',
                         strokeWeight: 6
                       });
-                      $("#route_directions").append('<li>' + e.instructions + '(' + e.duration.text + ') </li>');
+                      $("#route_directions").append('<li>' + e.instructions + ' (' + e.duration.text + ') </li>');
                   }
-              });
+              });*/
+             map.getRoutes({
+                origin: startCoords,
+                destination: endCoords,
+                travelMode: travelType,
+                callback: function(data) {
+                    $("#route_directions").append('<h5><b>' + data[0]["legs"][0].duration.text + '</b></h5> <br />');
+                    data[0]["legs"][0]["steps"].forEach(function(d) {
+                       $("#route_directions").append('<li>' + d.instructions + ' (' + d.duration.text + ') </li>');
+                       map.drawPolyline({
+                         path: d.path,
+                         strokeColor: 'black',
+                         strokeWeight: 6
+                       });
+                    });
+                }
+             });
         });
       });
       
