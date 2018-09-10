@@ -9,6 +9,7 @@ $(function() {
   var routesPanel = $("#routes_panel");
   var originCoordinates = [];
   var destinationCoordinates = [];
+  var destinationAddress = '';
     
   var options = {
     enableHighAccuracy: true,
@@ -174,6 +175,7 @@ $(function() {
             map.setCenter(latitude, longitude);
             destinationCoordinates[0] = latitude;
             destinationCoordinates[1] = longitude;
+            destinationAddress = place['Address'];
             handleDisplayRoute(map, originCoordinates, destinationCoordinates);
           }
         });
@@ -194,6 +196,9 @@ $(function() {
             click: function(e) {
                 $("#panel").html(content);
                 map.setCenter(latitude, longitude);
+                destinationCoordinates[0] = latitude;
+                destinationCoordinates[1] = longitude;
+                destinationAddress = place['Address'];
                 handleDisplayRoute(map, originCoordinates, destinationCoordinates);
             }
             });
@@ -242,11 +247,10 @@ $(function() {
       GMaps.geocode({
         address: addressField.val().trim(),
         callback: function(results, status) {
-          if (status == 'OK') {
+          if (status === 'OK') {
             var latlng = results[0].geometry.location;
             originCoordinates[0] = latlng.lat();
             originCoordinates[1] = latlng.lng();
-            console.log(originCoordinates);
             map.setCenter(latlng.lat(), latlng.lng());
             map.setZoom(14);
             map.addMarker({
@@ -308,6 +312,7 @@ $(function() {
          routesPanel.fadeIn();
           
          $("#routes_panel i").click(function(e) {
+              e.stopImmediatePropagation();
               map.removePolylines();
               $("#route_directions").html('');
               var id = $(this).attr("id");
@@ -330,7 +335,9 @@ $(function() {
                 origin: startCoords,
                 destination: endCoords,
                 travelMode: travelType,
-                callback: function(data) {
+                callback: function(data, status) {
+                    $("#route_directions").append('<h6> From: ' + addressField.val().trim() + '</h6>');
+                    $("#route_directions").append('<h6> To: ' + destinationAddress + '</h6> <br />');
                     $("#route_directions").append('<h5><b>' + data[0]["legs"][0].duration.text + '</b></h5> <br />');
                     data[0]["legs"][0]["steps"].forEach(function(d) {
                        $("#route_directions").append('<li>' + d.instructions + ' (' + d.duration.text + ') </li>');
@@ -347,8 +354,9 @@ $(function() {
       
       $("#returnToMainPanel").click(function(e) {
          routesPanel.fadeOut();
-         $("#route_directions").html('');
          mainPanel.fadeIn();
+         $("#route_directions").html('');
+          
       });
   }
     
