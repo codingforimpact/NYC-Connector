@@ -21,6 +21,7 @@
 	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmPBpjU-XCP5Sg1Nk6_PjGUEYkynGdD2A"></script>
     <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
@@ -143,7 +144,21 @@
                 <br />
 			</div>
 		</div>
-
+            
+            <div id="routes_panel">
+                <button class="btn btn-primary" id="returnToMainPanel">Back</button> 
+                
+                <br /><br />
+                
+                <h4>Select type of transportation:</h4><br />
+                <i class="fas fa-subway" id="transit"></i>
+                <i class="fas fa-car ml-3" id="driving"></i>
+                <i class="fas fa-walking ml-3" id="walking"></i>
+                
+                <br /><br />
+                
+                <div id="route_directions"></div>
+            </div>
             <div id="panel">
                 <h5 class="text-center mt-3">Click on a pinpoint marker</h5><hr>
             </div>

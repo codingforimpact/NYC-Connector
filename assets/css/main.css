@@ -163,7 +163,20 @@ input[type="checkbox"]:checked:hover {
      border-top-right-radius: 5px;
      border-bottom-right-radius: 5px;
 }
-#panel {
+#routes_panel i {
+    font-size: 2em;
+    cursor: pointer;
+}
+#routes_panel i:hover {
+    color: #32648c;
+}
+#routes_panel {
+    padding: 10px;
+}
+#routes_panel li {
+    font-size: 1.4em;
+}
+#panel, #routes_panel {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top: 3px solid #32648c;
@@ -212,6 +225,9 @@ input[type="checkbox"]:checked:hover {
      padding-left: 5%;
      height: 100%;
      width: 100%;
+}
+.place_info #showRoute:hover {
+    text-decoration: underline;
 }
 .place_info a:hover {
      text-decoration: underline;

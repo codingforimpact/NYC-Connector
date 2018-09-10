@@ -5,6 +5,10 @@ $(function() {
   var clearAllButton = $("#clear_all");
   var selectAllButton = $("#select_all");
   var deselectAllButton = $("#deselect_all");
+  var mainPanel = $("#panel");
+  var routesPanel = $("#routes_panel");
+  var originCoordinates = [];
+  var destinationCoordinates = [];
     
   var options = {
     enableHighAccuracy: true,
@@ -52,7 +56,6 @@ $(function() {
 
       var website_url = place['Website'] != undefined ? place['Website'] : searchQueryUrl(place['Name']);
       var content = '';
-
 
       var factype_color_classes = {
           "soup_kitchens": "orange-color",
@@ -104,7 +107,7 @@ $(function() {
 
       var opening_div_tag = '<div class="place_info ' + factype_color_classes[type] + '">';
       content += opening_div_tag;
-      content += '<a target="_blank" href="' + website_url + '">' + '<h4 class="firstHeading">' + place['Name'] +               '</h4></a><hr>' +
+      content += '<a target="_blank" href="' + website_url + '">' + '<h4 class="firstHeading">' + place['Name'] +               '</h4></a> <p class="' + factype_color_classes[type] + '" style="font-size: 1.2em; cursor: pointer;" id="showRoute">See Routes</p><hr>' +
                 '<div id="bodyContent">' +
                     '<ul>';
 
@@ -169,6 +172,9 @@ $(function() {
           click: function(e) {
             $("#panel").html(content);
             map.setCenter(latitude, longitude);
+            destinationCoordinates[0] = latitude;
+            destinationCoordinates[1] = longitude;
+            handleDisplayRoute(map, originCoordinates, destinationCoordinates);
           }
         });
     });
@@ -188,6 +194,7 @@ $(function() {
             click: function(e) {
                 $("#panel").html(content);
                 map.setCenter(latitude, longitude);
+                handleDisplayRoute(map, originCoordinates, destinationCoordinates);
             }
             });
         });
@@ -236,11 +243,14 @@ $(function() {
         callback: function(results, status) {
           if (status == 'OK') {
             var latlng = results[0].geometry.location;
+            originCoordinates[0] = latlng.lat();
+            originCoordinates[1] = latlng.lng();
+            console.log(originCoordinates);
             map.setCenter(latlng.lat(), latlng.lng());
             map.setZoom(14);
             map.addMarker({
-            lat: latlng.lat(),
-            lng: latlng.lng()
+                lat: latlng.lat(),
+                lng: latlng.lng()
             });
           }
         }
@@ -263,6 +273,9 @@ $(function() {
           map.removeMarkers();
           displayCheckedItems(map);
           getCurrentLocation(function(pos) {
+            originCoordinates[0] = pos.coords.latitude;
+            originCoordinates[1] = pos.coords.longitude;
+            addressField.val(pos.coords.latitude.toString() + ", " + pos.coords.longitude.toString());
             map.setCenter(pos.coords.latitude, pos.coords.longitude);
             map.setZoom(14);
             map.addMarker({
@@ -287,6 +300,39 @@ $(function() {
       });
   }
     
+  function handleDisplayRoute(map, startCoords, endCoords) {
+      
+      $("#showRoute").click(function(e) {
+         mainPanel.fadeOut();
+         routesPanel.fadeIn();
+         $("#routes_panel i").click(function(e) {
+              map.removePolylines();
+              $("#route_directions").html('');
+              var id = $(this).attr("id");
+              var travelType = id;
+              map.travelRoute({
+                  origin: startCoords,
+                  destination: endCoords,
+                  travelMode: travelType,
+                  step: function(e) {
+                      map.drawPolyline({
+                        path: e.path,
+                        strokeColor: 'black',
+                        strokeWeight: 6
+                      });
+                      $("#route_directions").append('<li>' + e.instructions + '(' + e.duration.text + ') </li>');
+                  }
+              });
+        });
+      });
+      
+      $("#returnToMainPanel").click(function(e) {
+         routesPanel.fadeOut();
+         $("#route_directions").html('');
+         mainPanel.fadeIn();
+      });
+  }
+    
   function init() {
       var map = new GMaps({
         el: '#map',
@@ -306,6 +352,9 @@ $(function() {
       handleSubmit(map);
       handleSubmitCurrentLocation(map);
       handleSelectButtons();
+      
+      routesPanel.hide();
+      
   }
 
   init();
