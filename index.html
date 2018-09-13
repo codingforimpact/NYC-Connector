@@ -36,6 +36,9 @@
         </button>
 		<div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbar-links">
 			<ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+					<a class="nav-link link" data-scroll href="#threeStepProcess">Three Step Process</a>
+				</li>
 				<li class="nav-item">
 					<a class="nav-link link" data-scroll href="#find_resources">Find Resources</a>
 				</li>
@@ -53,7 +56,7 @@
 		<div class="container" id="info_text">
 			<h1 class="display-4 text-center">NYC Connector</h1>
 			<h3 class="text-center"><em>Connecting individuals and resources!</em></h3><br>
-            <p class="lead">Built by <a style="color: skyblue;" href="https://www.codingforimpact.org" target="_blank">Coding for Impact</a>, <span class="font-weight-bold">NYC Connector</span> is a project which allows users to easily find and locate places near them where they can volunteer at, donate to, or find help at, such as soup kitchens, food pantries, SNAP centers, senior centers, food scrap drop-off sites, as well as clothing charities, homeless shelters, and medical centers. Enter an address or zip code and select the places you want to see, and resources nearby will be displayed on the map. Click on a pinpoint marker to view information about the resource. It's as easy as that!<br>
+            <p class="lead">Built by <a style="color: skyblue;" href="https://www.codingforimpact.org" target="_blank">Coding for Impact</a>, <span class="font-weight-bold">NYC Connector</span> is a project which allows users to easily find and locate places near them where they can volunteer at, donate to, or find help at, such as soup kitchens, food pantries, SNAP centers, senior centers, food scrap drop-off sites, as well as clothing charities, and homeless shelters. Enter an address or zip code and select the places you want to see, and resources nearby will be displayed on the map. Click on a pinpoint marker to view information about the resource. It's as easy as that!<br>
 			<br>
                 <a style="color: skyblue;" href="https://www.codingforimpact.org" target="_blank">Coding for Impact</a> is a student-run organization formed at Hunter College High School that builds web and mobile apps for non-profits and charities to further social good in the community.</p><br>
 			<br>
@@ -63,8 +66,34 @@
 		</div>
         </div>
 	</div>
+    <div class="jumbotron jumbotron-fluid pt-4" id="threeStepProcess">
+        
+        <br />
+        
+        <h1 class="display-4 text-center">Three Step Process</h1>
+        
+        <br /><br />
+        
+        <div class="row text-center">
+                    <div class="col">
+                        <i class="fas fa-hand-holding-heart circle-icon"></i> <hr><br /><br />
+                        <p class="lead" style="color: #1e9e71;">Choose your volunteer interests by selecting checkboxes corresponding to a type of volunteer center. Enter a zip code, address, or name of a place to find volunteer centers near you.</p>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-hand-pointer circle-icon" style="background-color: #406596;"></i> <hr><br /><br />
+                        <p class="lead" style="color: #406596;">Find relatable volunteer centers near your location by clicking <b>Find</b> or <b>Use Current Location</b>. Use the map to easily click and view pinpoint markers corresponding to volunteer centers. Click <b>See Routes</b> to see possible routes and times it would take to get to each place. View information about the volunteer center.</p>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-hands-helping circle-icon" style="background-color: #d11975"></i> <hr><br /><br />
+                        <p class="lead" style="color: #d11975">Start volunteering or donating and make an <b>impact</b> in your community!</p>
+                    </div>
+        </div>
+    </div>
 	<div class="jumbotron jumbotron-fluid pt-4" id="find_resources">
-        <h1 class="display-4 text-center" id="what">Find Resources</h1><br />
+        
+        <br />
+        
+        <h1 class="display-4 text-center">Find Resources</h1><br />
 		<div id="images">
 			<div class="row">
                 <div class="icon-group">
@@ -116,12 +145,14 @@
 						<input id="volunteer_checkbox" type="checkbox" /> Community Service Centers <br /><img src="assets/icons/lightblue-dot.png" alt="Light Blue Marker" />
 					</figcaption>
 				</div>
+                <!--
                 <div class="icon-group">
 					<img class="rounded-circle" src="assets/icons/health.png">
 					<figcaption>
 						<input id="medical_centers_checkbox" type="checkbox" /> Medical Centers <br /><img src="assets/icons/hospital.png" alt="Light Blue Marker" />
 					</figcaption>
 				</div>
+                -->
 			</div>
 		</div>
         
@@ -165,7 +196,6 @@
 		    <div id="map"></div>
 
 	</div>
-    <div id="find_resources"></div>
     <div class="jumbotron jumbotron-fluid" id="mission_jumbotron">
         <div class="container">
             <h1 class="display-4 text-center" id="mission">Mission</h1><br />
@@ -192,7 +222,7 @@
     offset: function(anchor, toggle) {
         var id = $(toggle).attr("href");
         if (id === "#find_resources") {
-            return 60;
+            return 40;
         }
         if (id === "#contact") {
             return 100;
@@ -203,7 +233,9 @@
         if (id === "#mission") {
             return 100;
         }
-        
+        if (id === "#threeStepProcess") {
+            return 40;
+        }
     },
     easing: 'easeInOutCubic', // Easing pattern to use
     customEasing: function(time) {
@@ -235,7 +267,7 @@
 
             var offset = 0;
             if (hash === "find_resources") {
-                offset = -50;
+                offset = -40;
             }
             if (hash === "contact") {
                 offset = -100;
@@ -245,6 +277,9 @@
             }
             if (hash === "mission") {
                 offset = -100;
+            }
+            if (hash === "threeStepProcess") {
+                offset = -40;
             }
             var sel = '[id="' + hash + '"], a[name="' + hash + '"]';
             var currentOffset = $( sel ).offset().top;

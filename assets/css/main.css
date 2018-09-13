@@ -59,6 +59,23 @@ input[type="checkbox"]:checked:hover {
     background-color: #f1f1f1;
 }
 
+b {
+    font-weight: bold;
+}
+
+.circle-icon {
+    background-color: #1e9e71;
+    color: blue;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 6em;
+    padding-top: 15%;
+    color: white;
+    
+}
+
 /* Header */
 #main_nav {
      background-color: white;
@@ -128,16 +145,23 @@ input[type="checkbox"]:checked:hover {
     font-size: 5em;
 }
 
+/* Three Step Process Section */
+
+#threeStepProcess {
+    background-color: white;
+    border-bottom: 1px solid grey;
+}
+
 /* Find Resources/Map Section */
 
 #find_resources {
     color: #43464c;
     background-color: white;
-    border-right: 3px solid #32648c;
-    border-left: 3px solid #32648c;
+    /*border-right: 3px solid #32648c;
+    border-left: 3px solid #32648c;*/
     position: relative;
 }
-#find_resources h1 {
+#find_resources h1, #threeStepProcess h1 {
     color: #555;
     font-weight: 300;
 }
@@ -309,7 +333,7 @@ input[type="checkbox"]:checked:hover {
     color: #f23a7c;
 }
 .purple-color, .purple-color a {
-    color: purple;
+    color: #934bbc;
 }
 .lightblue-color, .lightblue-color a {
     color: #7c95bc;
