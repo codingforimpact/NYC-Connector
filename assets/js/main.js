@@ -376,26 +376,29 @@ $(function() {
         lng: -74.0060,
         zoom: 11
       });
-      var legend = '';
-      legend += '<img src="assets/icons/orange-dot.png" alt="Orange Marker" /> Soup Kitchen <br /><br />';
-      legend += '<img src="assets/icons/yellow-dot.png" alt="Yellow Marker" /> Food Pantry <br /><br />';
-      legend += '<img src="assets/icons/green-dot.png" alt="Green Marker" /> SNAP Center <br /><br />';
-      legend += '<img src="assets/icons/blue-dot.png" alt="Blue Marker" /> Food Scrap Drop-Off Site <br /><br />';
-      legend += '<img src="assets/icons/red-dot.png" alt="Red Marker" /> Senior Center <br /><br />';
-      legend += '<img src="assets/icons/pink-dot.png" alt="Yellow Marker" /> Clothing Charity <br /><br />';
-      legend += '<img src="assets/icons/purple-dot.png" alt="Yellow Marker" /> Homeless Shelter <br /><br />';
-      legend += '<img src="assets/icons/lightblue-dot.png" alt="Yellow Marker" /> Community Service Center <br /><br />';
       
-      map.addControl({
-          position: 'top_right',
-          content: legend,
-          style: {
-            margin: '5px',
-            padding: '5px',
-            border: 'solid 1px #717B87',
-            background: '#fff'
-          }
-      });
+      if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+          var legend = '';
+          legend += '<img src="assets/icons/orange-dot.png" alt="Orange Marker" /> Soup Kitchen <br /><br />';
+          legend += '<img src="assets/icons/yellow-dot.png" alt="Yellow Marker" /> Food Pantry <br /><br />';
+          legend += '<img src="assets/icons/green-dot.png" alt="Green Marker" /> SNAP Center <br /><br />';
+          legend += '<img src="assets/icons/blue-dot.png" alt="Blue Marker" /> Food Scrap Drop-Off Site <br /><br />';
+          legend += '<img src="assets/icons/red-dot.png" alt="Red Marker" /> Senior Center <br /><br />';
+          legend += '<img src="assets/icons/pink-dot.png" alt="Yellow Marker" /> Clothing Charity <br /><br />';
+          legend += '<img src="assets/icons/purple-dot.png" alt="Yellow Marker" /> Homeless Shelter <br /><br />';
+          legend += '<img src="assets/icons/lightblue-dot.png" alt="Yellow Marker" /> Community Service Center <br /><br />';
+
+          map.addControl({
+              position: 'top_right',
+              content: legend,
+              style: {
+                margin: '5px',
+                padding: '5px',
+                border: 'solid 1px #717B87',
+                background: '#fff'
+              }
+          });
+      }
       
       displayMarkers(map, 'senior_centers', 'red');
       displayMarkers(map, 'snap_centers', 'green');
