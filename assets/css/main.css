@@ -148,7 +148,7 @@ b {
 /* Three Step Process Section */
 
 #threeStepProcess {
-    background-color: white;
+    background-color: rgb(248, 248, 248);
     border-bottom: 1px solid grey;
 }
 
@@ -279,15 +279,16 @@ b {
 
 #mission_jumbotron {
      /*background: url("../nyc_background7.jpg") no-repeat center bottom;*/
-     background-image: linear-gradient(15deg, #137a75 0%, #80d0c7 100%);
+     background-image: linear-gradient(15deg, #1c5772 0%, #80d0c7 100%);
      height: 100%;
+     /*
      background-attachment: fixed;
      background-size: cover;
      overflow: hidden;
      position:relative;
      top:0;
-     left:0;
-}
+     left:0;*/
+} /*
  #mission_jumbotron:before{
      content: '';
      position: absolute;
@@ -297,7 +298,7 @@ b {
      bottom: 0;
      background-color: #1e447a;
      opacity: 0.6;
-}
+}*/
 
 #mission_jumbotron .container {
     position: relative;
